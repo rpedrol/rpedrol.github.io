@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-image: url("../imatges/vilafranca.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+/* per a totes les llistes (llocs i menú) */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* per al menu dels enllaços */
+nav ul {
+  background: linear-gradient(#c4d7ff, #8daeff);
+  border-radius: 12px;
+  display: flex;
+}
+
+nav li {
+  flex: 1;
+  min-width: 0;
+}
+
+li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 8px;
+}
+
+li a:hover {
+  background-color: #a9c4ff;
+  color: white;
+}
+
+.active {
+  background-color: #001644;
+  color: white;
+}
+
+nav {
+  flex: 0 0 auto;
+  background: #c4d7ff;
+  padding: 20px;
+}
+
+article {
+  flex: 3;
+  background-color: #a9c4ff;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+article h1 {
+  grid-column: 1 / -1;
+  overflow-wrap: anywhere;
+}
+
+article form {
+  grid-column: 1 / -1;
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+fieldset {
+  margin: 0 0 18px;
+  padding: 16px;
+  border: 1px solid black;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: bold;
+  color: #001644;
+}
+
+label {
+  display: inline-block;
+  margin: 8px 0 4px;
+  font-weight: bold;
+}
+
+label.obligatori::after {
+    content: " *";
+    font-size: 1vw;
+    color: red;
+    position: relative;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  width: 100%;
+  min-height: 36px;
+  padding: 7px;
+  border: 1px solid black;
+  border-radius: 3px;
+  font: inherit;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 10px 4px 10px 0;
+}
+
+button {
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#enviar {
+  background-color: #001644;
+  color: white;
+}
+
+#esborrar {
+  margin-left: 8px;
+  background-color: #c4d7ff;
+  color: #001644;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.pagina-gracies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.index-menjar {
+  align-content: start;
+}
+
+.column {
+  min-height: 150px;
+}
+
+.column img {
+  width: 100%;
+}
+
+.lloc-column ul {
+  margin-bottom: 4px;
+}
+
+.lloc-column img {
+  display: block;
+  width: 100%;
+}
+
+footer {
+  background-color: #001644;
+  padding: 0.7px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex: 1;
+    padding: 10px 4px;
+  }
+
+  .llocs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  li a {
+    padding: 8px 2px;
+    font-size: 11px;
+  }
+
+  article form {
+    padding: 12px;
+  }
+
+  button {
+    width: 100%;
+    margin: 4px 0;
+  }
+
+  #esborrar {
+    margin-left: 0;
+  }
+}
