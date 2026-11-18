@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<title>Contacta'ns</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <h2>Portafoli Roger Pedrol</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inici</a></li>
+      <li><a href="sobre_mi.html">Sobre-mi</a></li>
+      <li><a href="competencies.html">Competències Personals</a></li>
+      <li><a href="projectes.html">Projectes</a></li>
+      <li><a href="contacte.html" class="active">Contacta'ns</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <h1>Formulari</h1>
+    <form action="gracies.html" method="get">
+      <fieldset>
+        <legend>Dades personals</legend>
+        <label class="obligatori" for="nomsencer">Nom i cognoms:</label><br>
+        <input type="text" id="nomsencer" name="nomsencer" maxlength="60" size="60" placeholder="Nom i cognoms" required><br>
+        <label class="obligatori" for="dni">Document d'identitat:</label><br>
+        <input type="text" id="dni" name="dni" maxlength="9" size="60" placeholder="12345678D o X1234567D" required pattern="(?:[XYZ][0-9]{7}|[0-9]{8})[A-Z]"><br>
+        <label class="obligatori" for="email">Email:</label><br>
+        <input type="email" id="email" name="email" maxlength="60" size="60" placeholder="nom@exemple.com" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"><br>
+        <label class="obligatori" for="edat">Edat:</label><br>
+        <input type="number" id="edat" name="edat" min="1" max="120" placeholder="La teva edat" required><br>
+        <label class="obligatori" for="pwd">Contrasenya:</label><br>
+        <input type="password" id="pwd" name="pwd" maxlength="30" size="60" placeholder="Mínim 6 caràcters: majúscula, minúscula, número i caràcter especial" required autocomplete="new-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{6,}" title="Mínim 6 caràcters, amb almenys una majúscula, una minúscula, un número i un caràcter especial (per exemple ! @ # $ %)"><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Tipus de client:</legend>
+        <input type="radio" id="contacte-email" name="preferencia-contacte" value="email" checked>
+        <label for="contacte-email">Particular</label>
+        <input type="radio" id="contacte-telefon" name="preferencia-contacte" value="telefon">
+        <label for="contacte-telefon">Empresa</label><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Imprescindibles per a la ruta:</legend>
+        <label class="obligatori" for="llocs">Llocs d'Interés:</label><br>
+        <select id="llocs" name="llocs" required>
+          <option value="">-- Tria un lloc --</option>
+          <option value="Església">Església</option>
+          <option value="Ajuntament">Ajuntament</option>
+          <option value="Vinseum">Vinseum</option>
+        </select><br>
+        <label class="obligatori" for="menjars">Menjars:</label><br>
+        <select id="menjars" name="menjars" required>
+          <option value="">-- Tria un menjar --</option>
+          <option value="coca">Coca garlanda</option>
+          <option value="paella">Paella</option>
+          <option value="catanies">Catànies</option>
+        </select><br>
+        <input type="checkbox" id="condicions" name="condicions" value="acceptada" required>
+        <label class="obligatori" for="condicions">Accepto les condicions del Servei.</label>
+      </fieldset>
+
+      <button type="submit" id="enviar" name="enviar">Enviar</button>
+      <button type="reset" id="esborrar" name="esborrar">Esborrar Formulari</button>
+    </form>
+  </article>
+</section>
+
+<footer>
+  <p>by roger</p>
+</footer>
+
+</body>
+</html>
